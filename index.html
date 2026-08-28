@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>见微论世 · 可验证的典籍推演</title>
+<style>
+:root{
+  --paper:#f5f0e6;--paper2:#efe7d6;--ink:#2b2b2b;--ink2:#5a544a;
+  --cinnabar:#9e3b2f;--gold:#c9a86a;--gold2:#e7d6ab;--ochre:#9c6b3f;
+  --kai:"STKaiti","KaiTi","华文楷体",serif;
+  --song:"Songti SC","STSong","Noto Serif SC","SimSun",serif;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:var(--song);line-height:1.75;background:var(--paper);
+  background-image:radial-gradient(circle at 20% 10%,rgba(0,0,0,.018) 0 1px,transparent 1px),
+    radial-gradient(circle at 70% 60%,rgba(0,0,0,.018) 0 1px,transparent 1px);background-size:7px 7px,11px 11px}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.hero{text-align:center;padding:48px 16px 28px}
+.hero h1{font-family:var(--kai);font-size:36px;letter-spacing:8px;margin:8px 0;color:var(--ink)}
+.hero h1 span{color:var(--cinnabar)}
+.hero .sub{font-family:var(--kai);color:var(--ochre);letter-spacing:3px;font-size:16px}
+.seal{display:inline-block;background:var(--cinnabar);color:#f5ecd8;font-family:var(--kai);
+  font-size:13px;padding:3px 10px;border-radius:4px;letter-spacing:2px;margin-top:12px}
+.claim{max-width:560px;margin:18px auto 0;font-size:15px;color:var(--ink2);line-height:1.7}
+.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:22px 0 8px}
+.cta a,.cta button{font-family:var(--kai);font-size:16px;letter-spacing:2px;padding:11px 22px;border-radius:8px;
+  text-decoration:none;border:none;cursor:pointer}
+.cta .primary{background:var(--cinnabar);color:#f5ecd8;border-bottom:none}
+.cta .ghost{background:transparent;color:var(--cinnabar);border:1px solid var(--cinnabar)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.hero h1{font-size:28px;letter-spacing:5px}}
+.card{background:var(--paper2);border:1px solid var(--gold);border-radius:10px;padding:14px 16px}
+.card h3{font-family:var(--kai);color:var(--cinnabar);margin:0 0 6px;font-size:17px}
+.card p{margin:0;font-size:13.5px;color:var(--ink2)}
+.sample{border:1.5px solid var(--cinnabar);border-radius:10px;padding:14px 16px;background:linear-gradient(180deg,#fff8f0,#fffdf9);margin:18px 0}
+.sample .lab{font-family:var(--kai);color:var(--cinnabar);font-size:14px;margin-bottom:8px}
+.sample .line{font-size:14px;margin:6px 0}
+.sample .cite{font-size:11px;color:var(--ink2)}
+.auth{background:#fff;border:1px solid var(--gold);border-radius:12px;padding:22px 20px;margin:24px 0 40px;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.auth h2{font-family:var(--kai);text-align:center;color:var(--cinnabar);margin:0 0 14px;letter-spacing:3px;font-size:22px}
+.tabs{display:flex;gap:8px;margin-bottom:14px}
+.tabs button{flex:1;padding:8px;border:1px solid var(--gold);background:#fff;border-radius:8px;cursor:pointer;font-family:var(--kai)}
+.tabs button.active{background:var(--cinnabar);color:#f5ecd8;border-color:var(--cinnabar)}
+.panel{display:none}.panel.show{display:block}
+label{display:block;font-size:13px;margin-bottom:6px;color:#5a544a}
+input{width:100%;padding:10px 12px;border:1px solid var(--gold);border-radius:8px;font-size:15px;margin-bottom:12px;font-family:var(--song)}
+button.primary{width:100%;padding:11px;border:none;border-radius:8px;background:var(--cinnabar);color:#f5ecd8;
+  font-family:var(--kai);font-size:17px;letter-spacing:2px;cursor:pointer}
+button.primary:disabled{opacity:.6}
+.err{color:var(--cinnabar);font-size:13px;min-height:20px;margin-bottom:8px}
+.note{font-size:12px;color:#888;margin-top:12px;line-height:1.6;text-align:center}
+.disclaimer{font-size:12.5px;color:var(--ink2);border:1px solid var(--gold);background:rgba(231,214,171,.22);
+  border-radius:6px;padding:12px 14px;margin:16px 0 8px;line-height:1.65}
+footer{text-align:center;color:var(--ink2);font-size:13px;padding:10px 16px 36px;font-family:var(--kai);letter-spacing:4px}
+</style>
+</head>
+<body>
+<header class="hero wrap">
+  <h1><span>见</span>　微　<span>论</span>　世</h1>
+  <div class="sub">可验证的典籍推演</div>
+  <div><span class="seal">術 · 知命不惑</span></div>
+  <p class="claim">结构到线 · 可验硬断 · 回验改权。<br>比排盘工具更有闭环，比情绪问答更有依据。</p>
+  <div class="cta">
+    <a class="primary" href="#auth">登录进入</a>
+    <a class="ghost" href="#auth" onclick="document.getElementById('tab-reg').click()">注册研习</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="grid">
+    <div class="card"><h3>断 · 多门派测算</h3><p>盲派做功、格局、调候、禄命法合参；输出带典籍标注的可验推断。</p></div>
+    <div class="card"><h3>验 · 回验校准</h3><p>勾选过往应期准否，系统下调/上调信号权重，校准近期推断。</p></div>
+    <div class="card"><h3>问 · 先生请教</h3><p>问道引典籍为据，非黑盒闲聊；可关联当前八字档案。</p></div>
+    <div class="card"><h3>盘 · 专业排盘</h3><p>八字、紫微、合盘、六爻、梅花；真太阳时与节气换岁。</p></div>
+  </div>
+
+  <div class="sample">
+    <div class="lab">示例 · 三句可验硬断（非定数）</div>
+    <div class="line">· 日主癸水身偏弱，盲派做功「印缓泄身」 <span class="cite">〔盲派体用〕</span></div>
+    <div class="line">· 职业取向偏劳取·技能，忌空谈策划润色 <span class="cite">〔盲派财官象〕</span></div>
+    <div class="line">· 现行大运宜对照流年冲合回验 <span class="cite">〔千里命稿·行运〕</span></div>
+  </div>
+
+  <div class="disclaimer">
+    本站为传统文化研习参考。数术启发省思，不替代理性判断、医疗或法律意见。倡导「知命而不认命」。
+  </div>
+
+  <div class="auth" id="auth">
+    <h2>进入系统</h2>
+    <div class="tabs">
+      <button type="button" id="tab-login" class="active">登录</button>
+      <button type="button" id="tab-reg">注册</button>
+    </div>
+    <div class="err" id="err"></div>
+    <div id="panel-login" class="panel show">
+      <label for="login-email">邮箱</label>
+      <input type="email" id="login-email" autocomplete="username" placeholder="your@email.com">
+      <label for="login-pwd">密码</label>
+      <input type="password" id="login-pwd" autocomplete="current-password">
+      <button type="button" class="primary" id="go-login">进入测算</button>
+      <p class="note">或使用站主统一密码（仅填密码栏）。邮箱账号可同步案例与回验。</p>
+    </div>
+    <div id="panel-reg" class="panel">
+      <label for="reg-email">邮箱</label>
+      <input type="email" id="reg-email" autocomplete="username">
+      <label for="reg-pwd">密码</label>
+      <input type="password" id="reg-pwd" autocomplete="new-password">
+      <label for="reg-invite">邀请码</label>
+      <input type="text" id="reg-invite" placeholder="由站主提供">
+      <button type="button" class="primary" id="go-reg">注册并进入</button>
+    </div>
+  </div>
+</main>
+<footer>厚德载物　天行健</footer>
+
+<script src="js/config.js"></script>
+<script>window.MINGLI_CONFIG=window.MINGLI_CONFIG||{API_BASE:''};</script>
+<script src="js/auth.js"></script>
+<script>
+(function(){
+  const err = document.getElementById('err');
+  function showTab(which) {
+    document.getElementById('tab-login').classList.toggle('active', which === 'login');
+    document.getElementById('tab-reg').classList.toggle('active', which === 'reg');
+    document.getElementById('panel-login').classList.toggle('show', which === 'login');
+    document.getElementById('panel-reg').classList.toggle('show', which === 'reg');
+    err.textContent = '';
+  }
+  document.getElementById('tab-login').onclick = () => showTab('login');
+  document.getElementById('tab-reg').onclick = () => showTab('reg');
+  document.getElementById('go-login').onclick = async () => {
+    err.textContent = '正在连接后台……';
+    try {
+      await MingliAuth.login(
+        document.getElementById('login-email').value.trim(),
+        document.getElementById('login-pwd').value
+      );
+      location.href = 'app.html';
+    } catch (e) { err.textContent = e.message; }
+  };
+  document.getElementById('go-reg').onclick = async () => {
+    err.textContent = '正在注册……';
+    try {
+      await MingliAuth.register(
+        document.getElementById('reg-email').value.trim(),
+        document.getElementById('reg-pwd').value,
+        document.getElementById('reg-invite').value.trim()
+      );
+      location.href = 'app.html';
+    } catch (e) { err.textContent = e.message; }
+  };
+  MingliAuth.checkAuth().then((ok) => {
+    if (ok) location.href = 'app.html';
+  }).catch(() => {});
+})();
+</script>
+</body>
+</html>
